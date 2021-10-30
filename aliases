@@ -2,3 +2,6 @@ alias vi=nvim
 alias vf='f -e vim' # quick opening files with vim
 alias ls=exa
 alias ll='exa -lrsnew --icons --git'
+alias lg=lazygit
+
+alias fzfp='fzf --preview "bat --color "always" {}" --bind=alt-j:preview-down --bind=alt-k:preview-up --preview-window=right:60%:wrap'
