@@ -1,24 +1,3 @@
-[submodule "plugins/zsh-autosuggestions"]
-	path = plugins/zsh-autosuggestions
-	url = https://github.com/zsh-users/zsh-autosuggestions.git
-[submodule "plugins/zsh-vi-mode"]
-	path = plugins/zsh-vi-mode
-	url = https://github.com/jeffreytse/zsh-vi-mode.git
-[submodule "plugins/zsh-history-substring-search"]
-	path = plugins/zsh-history-substring-search
-	url = https://github.com/zsh-users/zsh-history-substring-search.git
-[submodule "plugins/forgit"]
-	path = plugins/forgit
-	url = https://github.com/wfxr/forgit.git
-[submodule "plugins/zsh-syntax-highlighting"]
-	path = plugins/zsh-syntax-highlighting
-	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
-[submodule "plugins/fzf"]
-	path = plugins/fzf
-	url = https://github.com/junegunn/fzf.git
-[submodule "plugins/fasd"]
-	path = plugins/fasd
-	url = https://github.com/clvv/fasd.git
 [submodule "zsh/.config/plugins/zsh-autosuggestions"]
 	path = zsh/.config/plugins/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions.git
@@ -34,3 +13,6 @@
 [submodule "zsh/.config/plugins/forgit"]
 	path = zsh/.config/plugins/forgit
 	url = https://github.com/wfxr/forgit.git
+[submodule "zsh/.config/plugins/zsh-history-substring-search"]
+	path = zsh/.config/plugins/zsh-history-substring-search
+	url = https://github.com/zsh-users/zsh-history-substring-search.git
