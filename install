@@ -1,26 +1,11 @@
-#!/bin/bash
-BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+#!/usr/bin/env zsh
 
-ln -s ${BASEDIR}/zshrc ~/.zshrc
+pushd $DOTFILES
+for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g")
+do
+    stow -D $folder
+    stow $folder
+done
+popd
 
-ln -s ${BASEDIR}/aliases ~/.aliases
-
-ln -s ${BASEDIR}/vimrc ~/.vimrc
-
-ln -s ${BASEDIR}/gitconfig ~/.gitconfig
-
-ln -s ${BASEDIR}/tmux.conf ~/.tmux.conf
-
-ln -s ${BASEDIR}/plugins ~/.config/plugins
-
-ln -s ${BASEDIR}/config/alacritty ~/.config/alacritty
-
-ln -s ${BASEDIR}/config/rofi ~/.config/rofi
-
-ln -s ${BASEDIR}/config/nvim ~/.config/nvim
-
-[[ -d ${HOME}/bin ]] || mkdir ${HOME}/bin
-
-ln -s ${BASEDIR}/plugins/fasd/fasd ~/bin/fasd
-
-${BASEDIR}/plugins/fzf/install --no-fish --no-bash
+${DOTFILES}/zsh/.config/plugins/fzf/install --no-fish --no-bash

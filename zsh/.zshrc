@@ -71,7 +71,6 @@ export EDITOR=nvim
 export JAVA_HOME='/usr/lib/jvm/jdk-17'
 export FZF_DEFAULT_OPTS='--border=rounded --extended'
 export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap --bind '?:toggle-preview'"
-export PATH=$PATH:$HOME/bin
 
 # bindkey "^[[A" history-beginning-search-backward
 # bindkey "^[[B" history-beginning-search-forward

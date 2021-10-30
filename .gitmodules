@@ -19,3 +19,18 @@
 [submodule "plugins/fasd"]
 	path = plugins/fasd
 	url = https://github.com/clvv/fasd.git
+[submodule "zsh/.config/plugins/zsh-autosuggestions"]
+	path = zsh/.config/plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions.git
+[submodule "zsh/.config/plugins/zsh-syntax-highlighting"]
+	path = zsh/.config/plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+[submodule "zsh/.config/plugins/zsh-vi-mode"]
+	path = zsh/.config/plugins/zsh-vi-mode
+	url = https://github.com/jeffreytse/zsh-vi-mode.git
+[submodule "zsh/.config/plugins/fzf"]
+	path = zsh/.config/plugins/fzf
+	url = https://github.com/junegunn/fzf.git
+[submodule "zsh/.config/plugins/forgit"]
+	path = zsh/.config/plugins/forgit
+	url = https://github.com/wfxr/forgit.git
