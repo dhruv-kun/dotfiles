@@ -33,7 +33,6 @@ done
 #         bindkey -M emacs "$terminfo[kcud1]" history-substring-search-down
 #         bindkey -M viins "$terminfo[kcud1]" history-substring-search-down
 #     fi
-#     [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # }
 
 # zvm_after_init_commands+=(my_init)
@@ -161,3 +160,4 @@ zstyle :compinstall filename '$HOME.zshrc'
 # starship prompt
 eval "$(starship init zsh)"
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
