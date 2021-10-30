@@ -510,9 +510,8 @@ schemes:
 # *solarized-light
 # *solarized-dark
 # *tomorrow-night
-# *one-dark
 
-colors: *doom-one
+colors: *solarized-dark
 
 # Colors (Tomorrow Night)
 #colors:
