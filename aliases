@@ -1,0 +1,4 @@
+alias vi=nvim
+alias vf='f -e vim' # quick opening files with vim
+alias ls=exa
+alias ll='exa -lrsnew --icons --git'
