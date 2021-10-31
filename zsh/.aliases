@@ -16,3 +16,15 @@ function trm() {
         trash-rm $file
     done;
 }
+
+_fzf_comprun() {
+    local command=$1
+    shift
+    case "$command" in
+        cd) fzf "$@" --preview 'exa -aTL=2 {} | head -200' ;;
+        $VISUAL|$EDITOR|vi)
+            fzf "$@" --preview "([[ -d {} ]] && exa -aTL2 {}) || (bat --color=always --style=full {})" --bind=alt-j:preview-down --bind=alt-k:preview-up --preview-window=right:60%:wrap 
+            ;;
+        *) fzf "$@" ;;
+    esac
+}
