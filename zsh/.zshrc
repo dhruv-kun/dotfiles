@@ -75,7 +75,8 @@ HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND='fg=red,bold'
 HISTFILE=~/.histfile
 HISTSIZE=100000
 SAVEHIST=100000
-HIST_IGNORE_ALL_DUPS=false
+# HIST_IGNORE_ALL_DUPS=false
+HISTCONTROL=ignoredups
 
 setopt auto_cd
 setopt share_history
