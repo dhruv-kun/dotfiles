@@ -9,6 +9,8 @@ source_scripts=(
      ~/.config/plugins/vi-mode/vi-mode.plugin.zsh
     #  ~/.config/plugins/zsh-vi-mode/zsh-vi-mode.zsh
      ~/.config/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+     ~/.config/plugins/zsh-histdb/sqlite-history.zsh
+     ~/.config/plugins/zsh-histdb/histdb-interactive.zsh
      ~/.config/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
      ~/.config/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 )
@@ -21,6 +23,8 @@ for script in "${source_scripts[@]}"; do
         echo "File not found: $script"
     fi
 done
+
+autoload -Uz add-zsh-hook
 
 ## TODO: Check this out later, zsh-vi-mode not working with history search
 
@@ -48,6 +52,18 @@ if [[ -n "$terminfo[kcud1]" ]]; then
   bindkey -M viins "$terminfo[kcud1]" history-substring-search-down
 fi
 
+
+_zsh_autosuggest_strategy_histdb_top_here() {
+    local query="select commands.argv from
+history left join commands on history.command_id = commands.rowid
+left join places on history.place_id = places.rowid
+where places.dir LIKE '$(sql_escape $PWD)%'
+and commands.argv LIKE '$(sql_escape $1)%'
+group by commands.argv order by count(*) desc limit 1"
+    suggestion=$(_histdb_query "$query")
+}
+
+ZSH_AUTOSUGGEST_STRATEGY=histdb_top_here
 
 
 HISTORY_SUBSTRING_SEARCH_PREFIXED=true
@@ -77,6 +93,8 @@ export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap 
 
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
+
+bindkey '^r' _histdb-isearch
 # nnn shortcut
 bindkey -s '^p' 'n\n'
 # vi mode
