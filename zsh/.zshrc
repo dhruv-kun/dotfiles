@@ -85,6 +85,7 @@ setopt HIST_IGNORE_SPACE
 setopt HIST_EXPIRE_DUPS_FIRST
 
 export EDITOR=nvim
+export VISUAL=code
 export JAVA_HOME='/usr/lib/jvm/jdk-17'
 export FZF_DEFAULT_OPTS='--border=rounded --extended'
 export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap --bind '?:toggle-preview'"
