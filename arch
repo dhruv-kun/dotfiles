@@ -1,4 +1,4 @@
 #!/bin/bash
 
-sudo pacman -S nvim htop rofi tmux alacritty starship exa fasd lazygit
+sudo pacman -S nvim htop rofi tmux alacritty starship exa fasd lazygit sqlite3
 
