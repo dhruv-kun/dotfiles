@@ -9,3 +9,6 @@ done
 popd
 
 ${DOTFILES}/zsh/.config/plugins/fzf/install --no-fish --no-bash
+
+[[ -d ~/.local/share/fonts ]] && mkdir ~/.local/share/fonts
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/SourceCodePro.zip && unzip SourceCodePro.zip && cp *.ttf ~/.local/share/fonts
