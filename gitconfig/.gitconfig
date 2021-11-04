@@ -1,3 +1,5 @@
 [user]
 	email = dhruvsci30@gmail.com
 	name = Dhruv Kunjumon
+[core]
+	editor = nvim
