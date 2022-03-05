@@ -1,14 +1,17 @@
 alias vi=nvim
-alias vf='f -e vim' # quick opening files with vim
-alias ls=exa
-alias ll='exa -lrsnew --icons --git -a'
+alias vf='f -e nvim' # quick opening files with vim
+alias ls='ls --color'
+alias ll='exa -l --icons --git -a'
 alias lg=lazygit
 alias rm='rm -i'
 alias mv='mv -i'
 alias tp='trash-put'
 alias tl='trash-list'
+alias lt='exa -lTL=3 --icons --git -a'
 
 alias fzfp='fzf --preview "bat --color "always" {}" --bind=alt-j:preview-down --bind=alt-k:preview-up --preview-window=right:60%:wrap'
+
+alias k=kubectl
 
 function trm() {
     saveIFS=$IFS; IFS=$'\n'; files=($(tl | fzf -m | awk '{print $3}')); IFS=$saveIFS
