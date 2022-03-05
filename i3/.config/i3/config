@@ -277,5 +277,3 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec_always feh --bg-scale /usr/share/backgrounds/illyria-default.jpg
