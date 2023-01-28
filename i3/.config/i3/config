@@ -14,7 +14,7 @@ exec_always feh --bg-scale --randomize $HOME/Pictures/wallpapers/*
 exec_always --no-startup-id autotiling
 
 # notification daemon 
-exec_always --no-startup-id dunst
+exec_always --no-startup-id dunst -conf $HOME/.config/dunst/dunstrc
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
