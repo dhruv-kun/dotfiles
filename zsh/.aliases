@@ -5,6 +5,7 @@ alias ll='exa -l --icons --git -a'
 alias lg=lazygit
 alias rm='rm -i'
 alias mv='mv -i'
+alias cat='bat'
 alias tp='trash-put'
 alias tl='trash-list'
 alias lt='exa -lTL=3 --icons --git -a'
