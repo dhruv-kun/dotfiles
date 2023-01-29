@@ -17,6 +17,6 @@ message=$(printf 'Level: %s%s' "$bat_capacity")
 if [[ $bat_capacity -lt 15 && $bat_status == 'Discharging' ]]; then
     /usr/bin/notify-send "Low Battery" "${message}" -t 10000 -u normal -i $low_battery_icon_path
 fi
-if [[ $bat_status == 'Full' ]]; then
+if [[ $bat_status == 'Full' || ($bat_status == 'Charging' && $bat_capacity -eq 100) ]]; then
     /usr/bin/notify-send "Full Battery" "${message}" -t 10000 -u normal -i $full_battery_icon_path
 fi
