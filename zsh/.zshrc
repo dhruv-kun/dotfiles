@@ -7,7 +7,7 @@ source_scripts=(
      ~/.config/plugins/mvn/mvn.plugin.zsh
      ~/.config/plugins/forgit/forgit.plugin.zsh
      ~/.config/plugins/vi-mode/vi-mode.plugin.zsh
-    #  ~/.config/plugins/zsh-vi-mode/zsh-vi-mode.zsh
+     # ~/.config/plugins/zsh-vi-mode/zsh-vi-mode.zsh
      ~/.config/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
      ~/.config/plugins/zsh-histdb/sqlite-history.zsh
      ~/.config/plugins/zsh-histdb/histdb-interactive.zsh
@@ -86,7 +86,7 @@ setopt HIST_EXPIRE_DUPS_FIRST
 
 export EDITOR=nvim
 export VISUAL=code
-export JAVA_HOME='/usr/lib/jvm/jdk-17'
+export JAVA_HOME='/opt/homebrew/opt/openjdk@17'
 export FZF_DEFAULT_OPTS='--border=rounded --extended'
 export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap --bind '?:toggle-preview'"
 
@@ -102,7 +102,8 @@ bindkey -s '^p' 'n\n'
 # vi mode
 bindkey -v
 
-eval "$(fasd --init auto)"
+# eval "$(fasd --init auto)"
+. /opt/homebrew/etc/profile.d/z.sh
 
 
 n ()
@@ -191,3 +192,9 @@ export FZF_CTRL_T_OPTS="--preview 'bat --color=always --line-range :50 {}'"
 export FZF_ALT_C_COMMAND='fd --type d . --color=never --hidden'
 export FZF_ALT_C_OPTS="--preview 'exa -lT --icons -a --git {} | head -50'"
 
+
+
+export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
+export PATH="/Users/dhruv/Tools/apache-maven-3.9.3/bin:$PATH"
+export PATH="/Users/dhruv/Tools/flutter/bin:$PATH"
+export PATH="/Users/dhruv/go/bin:$PATH"
