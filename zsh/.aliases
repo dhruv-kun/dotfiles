@@ -1,6 +1,6 @@
 alias vi=nvim
 alias vf='f -e nvim' # quick opening files with vim
-alias ls='ls --color'
+alias ls='exa'
 alias ll='exa -l --icons --git -a'
 alias lg=lazygit
 alias rm='rm -i'
