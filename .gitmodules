@@ -19,3 +19,6 @@
 [submodule "zsh/.config/plugins/zsh-histdb"]
 	path = zsh/.config/plugins/zsh-histdb
 	url = https://github.com/larkery/zsh-histdb.git
+[submodule "zsh/.config/plugins/zsh-fzf-history-search"]
+	path = zsh/.config/plugins/zsh-fzf-history-search
+	url = https://github.com/joshskidmore/zsh-fzf-history-search.git
