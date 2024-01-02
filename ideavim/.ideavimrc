@@ -1,0 +1,61 @@
+set highlightedyank
+
+let mapleader=" "
+set showmode
+" set incsearch
+set nu
+set rnu
+
+set ignorecase
+set smartcase
+
+map <leader>y \"+y
+map <leader>Y \"+Y
+
+map <leader>d \"_d
+
+
+map <C-d> <C-d>zz
+map <C-u> <C-u>zz
+
+map n nzzzv
+map N Nzzzv
+
+map <leader>sc <Action>(GotoClass)
+map <leader>? <Action>(RecentFiles)
+map <leader>sf <Action>(SearchEverywhere)
+map <leader>sp <Action>(FindInPath)
+
+map <leader>gi <Action>(GotoImplementation)
+map <leader>gd <Action>(GotoDeclaration)
+map <leader>gf <Action>(GotoFile)
+map <leader>gr <Action>(FindUsages)
+
+map <leader>]d <Action>(GotoNextError)
+map <leader>[d <Action>(GotoPreviousError)
+
+map <leader>; <Action>(MethodDown)zz
+map <leader>. <Action>(MethodUp)zz
+
+map <leader>qi <Action>(QuickImplementation)
+map <leader>ca <Action>(ShowIntentionActions)
+map <leader>cc <Action>(SmartTypeCompletion)
+map <leader>co <Action>(OverrideMethods)
+map <leader>ci <Action>(ImplementMethods)
+map <leader>cn <Action>(Generate)
+map <leader>fm <Action>(ReformatCode)
+map <leader>gc <Action>(CommentByLineComment)
+map <leader>cr <Action>(RunClass)
+map <C-t> <Action>(Forward)
+map <C-o> <Action>(Back)
+
+map <leader>rn <Action>(RenameElement)
+
+map <leader>ff <Action>(HideAllWindows)
+
+map <leader>mi <Action>(Maven.ReimportProject)
+
+" diff for unstaged file
+map <leader>df <Action>(Compare.SameVersion)
+
+
